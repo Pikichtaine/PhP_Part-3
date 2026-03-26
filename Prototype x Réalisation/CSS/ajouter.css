@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BODY */
+body {
+    background: linear-gradient(135deg, #4f5bd5, #8e2de2);
+    color: white;
+    min-height: 100vh;
+}
+
+/* HEADER */
+.top-bar {
+    height: 60px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+    .logo {
+    width: 150px;
+}
+.icons{
+    display: flex;
+    gap: 66px;
+}
+a {
+    text-decoration: none;
+}
+a img {
+    width: 30px;
+    cursor: pointer;
+}
+
+
+
+
+/* MAIN */
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+/* MEME CARD */
+.meme-card {
+    background: linear-gradient(180deg, #3c4bb8, #5a2da5);
+    
+    width: 100%;
+    max-width: 360px;          /* controla el tamaño */
+    aspect-ratio: 1 / 1;       /* card cuadrada */
+    
+    border-radius: 15px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* CONTENEDOR DE IMAGEN */
+.meme-image {
+    width: 100%;
+    position: relative;
+}
+
+/* IMAGEN SUBIDA */
+.meme-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* foto llena sin deformarse */
+    border-radius: 10px;
+}
+
+/* CAJA DE SUBIDA (MARCO +) */
+.upload-box {
+    width: 100%;
+    aspect-ratio: 1 / 1;       /* 🔥 clave */
+    
+    background-image: url("../medias/add-image.png");
+    background-size: contain;  /* NO se deforma */
+    background-repeat: no-repeat;
+    background-position: center;
+
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+/* BUTTON */
+.oculto{
+    display: none;
+}
+.change-btn {
+    margin-top: 15px;
+    background: none;
+    border: none;
+    color: #cbd5ff;
+    cursor: pointer;
+}
+
+/* RIGHT PANEL */
+.panel {
+    background: linear-gradient(180deg, #5a2da5, #7b2cbf);
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.panel h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.panel input,
+.panel textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    font-family: inherit;
+    resize: none;
+}
+
+.finish-btn {
+    background: #4ade80;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #064e3b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .main {
+        grid-template-columns: 1fr;
+    }
+}
